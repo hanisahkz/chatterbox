@@ -7,12 +7,14 @@ Rails.application.routes.draw do
 
   # resources :conversations, only: [:create] #this gives the same thing as below, but this is more automated and less error-prone
   # post 'conversations', to: 'conversations#create'
-  resources :conversations, only: [:create] do
-    member do
-      post :close
-    end
-    resources :messages, only: [:create]
-  end
+ 
+
+  # resources :conversations, only: [:create] do
+  #   member do
+  #     post :close
+  #   end
+  #   resources :messages, only: [:create]
+  # end
 
 
 end
